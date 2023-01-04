@@ -1,6 +1,6 @@
 {
-    "id": "nodebb-theme-quickstart",
-    "name": "My Theme Name",
-    "description": "Enter a description here",
-    "url": "https://github.com/nodebb/nodebb-theme-quickstart"
+    "id": "nodebb-theme-operation-pandora-trigger",
+    "name": "Operation Pandora Trigger",
+    "description": "Custom Theme for OPT Community",
+    "url": "https://github.com/OperationPandoraTrigger/nodebb-theme-operation-pandora-trigger"
 }

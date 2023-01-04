@@ -1,5 +1,5 @@
 {
-	"id": "nodebb-theme-quickstart",
+	"id": "nodebb-theme-operation-pandora-trigger",
 	"library": "./lib/theme.js",
 	"hooks": [
 		{

@@ -1,10 +1,17 @@
 {
-    "name": "nodebb-theme-quickstart",
+    "name": "nodebb-theme-operation-pandora-trigger",
     "version": "0.1.0",
-    "description": "Enter a description here",
+    "description": "Custom Theme for OPT Community",
     "main": "theme.less",
     "keywords": [],
     "license": "MIT",
+    "author": {
+        "name": "Frozen_byte",
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/OperationPandoraTrigger/nodebb-theme-operation-pandora-trigger"
+    },
     "husky": {
         "hooks": {
             "pre-commit": "npx lint-staged",
