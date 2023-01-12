@@ -1,6 +1,6 @@
 {
     "name": "nodebb-theme-operation-pandora-trigger",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "Custom Theme for OPT Community",
     "main": "library.js",
     "keywords": [],
