@@ -17,9 +17,12 @@
   ],
   "scripts": [
     "public/client.js",
-    "../nodebb-theme-persona/public/persona.js"
+    "../nodebb-theme-persona/public/persona.js",
+    "../nodebb-theme-persona/public/modules/autohidingnavbar.js"
   ],
   "modules": {
+    "../admin/plugins/persona.js": "../nodebb-theme-persona/public/admin.js",
+    "../client/account/theme.js": "../nodebb-theme-persona/public/settings.js"
   },
   "staticDirs": {
     "assets": "./assets"
