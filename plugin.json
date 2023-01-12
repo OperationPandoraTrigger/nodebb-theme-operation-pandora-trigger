@@ -22,7 +22,8 @@
   ],
   "modules": {
     "../admin/plugins/persona.js": "../nodebb-theme-persona/public/admin.js",
-    "../client/account/theme.js": "../nodebb-theme-persona/public/settings.js"
+    "../client/account/theme.js": "../nodebb-theme-persona/public/settings.js",
+    "pulling.js": "node_modules/pulling/build/pulling-drawer.js"
   },
   "staticDirs": {
     "assets": "./assets"
