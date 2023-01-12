@@ -9,11 +9,19 @@
     {
       "hook": "filter:widget.render:eventparticipation",
       "method": "renderParticipationWidget"
+    },
+    {
+      "hook": "filter:widgets.getAreas",
+      "method": "defineWidgetAreas"
     }
   ],
   "scripts": [
-    "public/client.js"
+    "public/client.js",
+    "../nodebb-theme-persona/public/persona.js"
   ],
   "modules": {
+  },
+  "staticDirs": {
+    "assets": "./assets"
   }
 }

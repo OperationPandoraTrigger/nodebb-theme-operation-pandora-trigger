@@ -1,0 +1,27 @@
+@asset-url: "/assets/plugins/nodebb-theme-operation-pandora-trigger/assets/";
+:root {
+  --padding-s: clamp(1rem, -2.5427rem + 7.3903vw, 3rem);
+}
+
+body {
+  background-color: transparent;
+  background-image: url("@{asset-url}/bg_map.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+[component="topic"] [component="post"] [component="post/content"] {
+  --div-shape: var(--padding-s);
+  clip-path: polygon(
+    0                               0,
+    calc(100% - var(--div-shape))   0%,
+    100%                            var(--div-shape),
+    100%                            100%,
+    var(--div-shape)                100%,
+    0%                              calc(100% - var(--div-shape))
+  );
+  background-image: radial-gradient(#00000045, #000000AA);
+  padding: var(--padding-s);
+  backdrop-filter: blur(2px);
+}
