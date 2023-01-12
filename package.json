@@ -1,12 +1,12 @@
 {
     "name": "nodebb-theme-operation-pandora-trigger",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Custom Theme for OPT Community",
-    "main": "theme.less",
+    "main": "library.js",
     "keywords": [],
     "license": "MIT",
     "author": {
-        "name": "Frozen_byte",
+        "name": "Frozen_byte"
     },
     "repository": {
         "type": "git",
@@ -36,5 +36,8 @@
         "eslint-plugin-import": "2.x",
         "husky": "5.0.9",
         "lint-staged": "10.5.4"
+    },
+    "nbbpm": {
+        "compatibility": "^2.8.0"
     }
 }

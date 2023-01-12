@@ -1,0 +1,32 @@
+.widget-eventparticipation {
+  .plugin-calendar-event-responses {
+    min-height: 40px;
+    .plugin-calendar-event-responses-lists {
+      display: none;
+    }
+  }
+
+  .positiveResponseCountByGroup {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+
+    > div {
+      margin: 0.7em 0.5em;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+
+      .responseCount {
+        margin: 0 .3em;
+      }
+
+      &:last-child {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}

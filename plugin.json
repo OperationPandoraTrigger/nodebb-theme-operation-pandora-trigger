@@ -1,18 +1,19 @@
 {
-	"id": "nodebb-theme-operation-pandora-trigger",
-	"library": "./lib/theme.js",
-	"hooks": [
-		{
-			"hook": "filter:widgets.getAreas", "method": "defineWidgetAreas"
-		}
-	],
-	"scripts": [
-		"public/client.js",
-		"../nodebb-theme-persona/public/persona.js",
-		"../nodebb-theme-persona/public/modules/autohidingnavbar.js",
-		"../nodebb-theme-persona/public/modules/quickreply.js"
-	],
-	"modules": {
-		"pulling.js": "node_modules/pulling/build/pulling-drawer.js"
-	}
+  "id": "nodebb-theme-operation-pandora-trigger",
+  "hooks": [
+    {
+      "hook": "filter:widgets.getWidgets",
+      "method": "defineWidgets",
+      "callbacked": true
+    },
+    {
+      "hook": "filter:widget.render:eventparticipation",
+      "method": "renderParticipationWidget"
+    }
+  ],
+  "scripts": [
+    "public/client.js"
+  ],
+  "modules": {
+  }
 }
