@@ -1,29 +1,17 @@
 {
   "id": "nodebb-theme-operation-pandora-trigger",
   "hooks": [
-    {
-      "hook": "filter:widgets.getWidgets",
-      "method": "defineWidgets",
-      "callbacked": true
-    },
-    {
-      "hook": "filter:widget.render:eventparticipation",
-      "method": "renderParticipationWidget"
-    },
-    {
-      "hook": "filter:widgets.getAreas",
-      "method": "defineWidgetAreas"
-    }
+    { "hook": "filter:widgets.getWidgets", "method": "defineWidgets", "callbacked": true },
+    { "hook": "filter:widget.render:eventparticipation", "method": "renderParticipationWidget" },
+    { "hook": "filter:widgets.getAreas", "method": "defineWidgetAreas" }
   ],
   "scripts": [
     "public/client.js",
-    "../nodebb-theme-persona/public/persona.js",
     "../nodebb-theme-persona/public/modules/autohidingnavbar.js",
-    "../nodebb-theme-persona/public/modules/quickreply.js"
+    "../nodebb-theme-persona/public/persona.js"
   ],
   "modules": {
-    "../admin/plugins/persona.js": "../nodebb-theme-persona/public/admin.js",
-    "../client/account/theme.js": "../nodebb-theme-persona/public/settings.js",
+    "persona/quickreply.js": "../nodebb-theme-persona/public/modules/quickreply.js",
     "pulling.js": "node_modules/pulling/build/pulling-drawer.js"
   },
   "staticDirs": {
