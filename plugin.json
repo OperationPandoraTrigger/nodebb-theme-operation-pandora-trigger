@@ -16,5 +16,6 @@
   },
   "staticDirs": {
     "assets": "./assets"
-  }
+  },
+  "languages": "languages"
 }

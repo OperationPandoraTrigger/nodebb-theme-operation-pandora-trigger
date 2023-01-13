@@ -1,6 +1,6 @@
 {
-  "campaign-document": "Campaign document",
-  "strategic-map": "Strategic map",
-  "forum": "Forum",
-  "events": "Events"
+  "opt-theme.campaign-document": "Campaign document",
+  "opt-theme..strategic-map": "Strategic map",
+  "opt-theme..forum": "Forum",
+  "opt-theme..events": "Events"
 }
