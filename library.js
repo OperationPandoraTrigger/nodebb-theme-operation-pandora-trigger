@@ -10,7 +10,7 @@ library.renderParticipationWidget = async function (widget) {
 	const daysDelta = 15 * 24 * 60 * 60 * 1000;
 	const { displayedGroups = [], relevantCategoryId = 0 } = widget.data;
 
-	const todayStart = new Date(new Date().setHours(0, 0, 0, 0));
+	const todayStart = new Date();
 	const [eventsByDate, groupMembers] = await Promise.all([
 		calendarEvent.getEventsByDate(+todayStart, +todayStart + daysDelta),
 		groups.getGroupsAndMembers(displayedGroups),
