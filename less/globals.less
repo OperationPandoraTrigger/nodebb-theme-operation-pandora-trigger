@@ -11,6 +11,7 @@ body {
   background-attachment: fixed;
 }
 
+.styled-container,
 [component="topic"] [component="post"] [component="post/content"] {
   --div-shape: var(--padding-s);
   clip-path: polygon(
@@ -24,4 +25,17 @@ body {
   background-image: radial-gradient(#00000045, #000000AA);
   padding: var(--padding-s);
   backdrop-filter: blur(2px);
+}
+
+.btn,
+.btn {
+  &:active,
+  &.active {
+    box-shadow: inset 0px -3px 0px 0px white;
+  }
+}
+
+.participation-counter {
+  max-width: fit-content;
+  margin: 0 auto 2.4em;
 }
