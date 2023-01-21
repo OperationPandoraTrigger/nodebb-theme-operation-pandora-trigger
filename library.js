@@ -11,10 +11,13 @@ library.renderParticipationWidget = async function (widget) {
 	const { displayedGroups = [], relevantCategoryId = 0 } = widget.data;
 
 	const todayStart = new Date();
-	const [eventsByDate, groupMembers] = await Promise.all([
+
+	const [eventsByDate, groupData, groupMembers] = await Promise.all([
 		calendarEvent.getEventsByDate(+todayStart, +todayStart + daysDelta),
-		groups.getGroupsAndMembers(displayedGroups),
+		groups.getGroupsData(displayedGroups),
+		groups.getMemberUsers(displayedGroups, 0, -1),
 	]);
+
 	const {
 		pid = 0,
 		name: eventName = '',
@@ -30,19 +33,14 @@ library.renderParticipationWidget = async function (widget) {
 		const yesUids = currentResponses.yes.map(response => response.uid);
 		const maybeUids = currentResponses.maybe.map(response => response.uid);
 		const positiveResponseUids = [...yesUids, ...maybeUids];
-		const getPositiveResponseCount = groupName => groupMembers
-			.find(group => group.name === groupName)
-			.members
-			.filter(({ uid }) => positiveResponseUids.includes(uid)).length;
-
 
 		positiveResponseCountByGroup = displayedGroups.map((groupName, i) => {
 			const {
 				userTitle,
 				slug,
 				labelColor,
-			} = groupMembers[i];
-			const responseCount = getPositiveResponseCount(groupName);
+			} = groupData[i];
+			const responseCount = groupMembers[i]?.filter(({ uid }) => positiveResponseUids.includes(uid)).length;
 
 			return {
 				groupName,
